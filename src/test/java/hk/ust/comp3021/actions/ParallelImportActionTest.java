@@ -116,6 +116,7 @@ public class ParallelImportActionTest {
 
 		ParallelImportAction importAction = new ParallelImportAction("Action_1", user, new Date());
 		importAction.setFilePaths(bibFilePath);
+		engine.processParallelImport(user, importAction);
 		HashMap<String, Paper> papers = importAction.getImportedPapers();
 
 		String journalStr = "Proceedings of the ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI)";
